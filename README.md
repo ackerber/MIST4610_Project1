@@ -253,6 +253,6 @@ Justification: This query is essential for managing inventory by providing a cle
 <img width="724" alt="Screenshot 2023-11-03 at 6 50 05 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/ab639736-4106-4318-a73e-1b3c6701f9c4">
 
 ## Database Information
-
+Name of the database: ns_F2339217Group4
 
 
