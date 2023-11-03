@@ -6,7 +6,7 @@ Group 4
 ## Team Members
 Ethan Berry  
 Esha Bhat  
-Anna Kerber  
+Anna Kerber [@ackerber](https://github.com/ackerber)  
 Pranay Patel  
 Rafe Rynne  
 Jameson Shi
