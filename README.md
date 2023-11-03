@@ -186,71 +186,70 @@ Description: This SQL query calculates the total spending with each supplier by 
 
 Justification: This query is valuable for procurement and financial analysis as it helps identify and prioritize the suppliers with the highest total spending, enabling better supplier management and cost control.
 
-<img width="722" alt="Screenshot 2023-11-03 at 6 46 45 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/dae2786c-5a2e-4995-aef2-fc9004a4df66">
-
+![a597494711ca4224b42c928fd70dd31a](https://github.com/ackerber/MIST4610_Project1/assets/95188765/15e5ff35-afdb-446f-8ec4-f5355d4cfef8)
 
 #### Query 2:  
 Description: This SQL query retrieves the first name, last name, and total billing amount for patients whose payment status is marked as 'Incomplete' in the BillingRecords, by joining the Patients and BillingRecords tables.  
 
 Justification: This query is useful for identifying patients with incomplete payments, facilitating follow-up actions, and financial management within a healthcare system or medical practice.
 
-<img width="727" alt="Screenshot 2023-11-03 at 6 48 09 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/202a0c2e-56d3-4a31-9e7c-c7827d7d669c">
+![7c6dcf6084bc4badaa5ce6c210d949e6](https://github.com/ackerber/MIST4610_Project1/assets/95188765/e90508dc-33b4-48e7-afff-2e86e9765a1d)
 
 #### Query 3:  
 Description: This SQL query selects the first name, last name, and phone number of patients who do not have any associated emergency contacts in the EmergencyContacts table.  
 
 Justification: This query is useful for identifying patients who may not have provided emergency contact information, allowing the healthcare facility to follow up and ensure the completeness of patient records for safety and communication purposes.
 
-<img width="725" alt="Screenshot 2023-11-03 at 6 48 26 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/0209bb42-ea58-411f-a617-160129206a4d">
+![e5ab70fbc4914d76ba7e61bdf9e0c039](https://github.com/ackerber/MIST4610_Project1/assets/95188765/5211e44e-f1fa-4680-ba7d-fa6b2e1f55f8)
 
 #### Query 4:  
 Description: This SQL query retrieves the equipment name, counts how many times each equipment has been used in appointments (UsageCount), and displays the maintenance schedule for equipment that has been used in appointments. It uses a left join between the MedicalEquipment and EquipmentUsed tables to capture equipment usage.  
 
 Justification: This query helps in tracking the usage of medical equipment in appointments and provides information about the maintenance schedule, which is crucial for ensuring the proper functioning and upkeep of medical equipment in a healthcare facility.  
 
-<img width="726" alt="Screenshot 2023-11-03 at 6 48 41 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/2074c95f-c114-42b6-80f4-cfe01cbc01b9">
+![5ba31a57f170493da277b81485ce3137](https://github.com/ackerber/MIST4610_Project1/assets/95188765/433b5198-4d24-4a82-82d1-320bf9c6f608)
 
 #### Query 5:  
 Description: This SQL query selects the first name (fName) and last name (lName) of patients, along with the total number of appointments they have, by performing a left join between the Patients and Appointments tables.  
 
 Justification: This query is useful for tracking and reporting on the total number of appointments for each patient, providing insights into patient engagement and scheduling patterns within a healthcare system or medical practice.
 
-<img width="732" alt="Screenshot 2023-11-03 at 6 49 01 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/9eec3dc5-39cd-4427-a687-179e4a66a12f">
+![0607f326044e429db76c2e72346a02c2](https://github.com/ackerber/MIST4610_Project1/assets/95188765/38a02df2-325a-4f6e-a1b0-7553726f30b1)
 
 #### Query 6:  
 Description: This SQL query retrieves the facility name and the count of medical equipment available in each facility, considering equipment usage, and then orders the results in descending order based on the equipment count.  
 
 Justification: This query is valuable for assessing the inventory and utilization of medical equipment in different facilities, allowing for effective resource allocation and maintenance management based on equipment availability and usage.
 
-<img width="729" alt="Screenshot 2023-11-03 at 6 49 16 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/e8a7c6af-d51c-43ee-9ee6-37038418053f">
+![a8e98f3242dd457387cb5dc3c31b4446](https://github.com/ackerber/MIST4610_Project1/assets/95188765/70f1617d-2ec9-4a5b-9a6e-a754b5033fdf)
 
 #### Query 7:  
 Description: This SQL query retrieves the first name (fName) and last name (lName) of patients who do not have any upcoming appointments, based on the current date, and orders the results alphabetically by first name and last name.  
 
 Justification: This query is helpful for identifying patients who do not have scheduled appointments, allowing healthcare providers to reach out to them for scheduling or follow-up, and it presents the results in an organized manner for easy reference.
 
-<img width="728" alt="Screenshot 2023-11-03 at 6 49 29 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/ae32bc9a-bd5e-4da4-bb45-88844790f1f8">
+![3b649886efe148d895c4f5439ee1cdd2](https://github.com/ackerber/MIST4610_Project1/assets/95188765/4c404114-aa80-4928-9c8f-7a9b183e139c)
 
 #### Query 8:  
 Description: This SQL query retrieves the qualifications of medical staff and counts the number of times they are associated with emergency transport events by performing a left join between the MedicalStaff and EmergencyTransport tables. It then groups the results by qualifications.  
 
 Justification: This query is useful for analyzing the involvement of medical staff with different qualifications in emergency transport cases, which can help in resource allocation, training, and quality assessment in a healthcare setting.
 
-<img width="733" alt="Screenshot 2023-11-03 at 6 49 42 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/1839e82c-9850-4b7c-9f2f-288d0f4057f6">
+![2ee84a2af80c46138217d0d38d78ff06](https://github.com/ackerber/MIST4610_Project1/assets/95188765/bcc23ab8-9442-4c30-9813-8800b2078c12)
 
 #### Query 9:  
 Description: This SQL query retrieves the names and quantities of items in the inventory where the quantity on hand is less than 100, and the threshold for low quantity can be adjusted as needed.  
 
 Justification: This query is valuable for inventory management, as it identifies items that are running low in stock, allowing for timely restocking and ensuring that necessary items are readily available.
 
-<img width="731" alt="Screenshot 2023-11-03 at 6 49 53 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/ddfce49b-7fa0-48bc-8c49-e2be57be3483">
+![4fa1a6057f6d46459b205a2c885b8043](https://github.com/ackerber/MIST4610_Project1/assets/95188765/92f108d4-3370-4d89-9ed4-302aeb6fd8e0)
 
 #### Query 10:  
 Description: This SQL query retrieves information about items in the Inventory, calculates and categorizes their shelf life, and orders the results in descending order based on the shelf life category.  
 
 Justification: This query is essential for managing inventory by providing a clear overview of items' shelf life and allowing for the identification of items with longer or shorter shelf lives, enabling more efficient inventory control and decision-making.
 
-<img width="724" alt="Screenshot 2023-11-03 at 6 50 05 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/ab639736-4106-4318-a73e-1b3c6701f9c4">
+![287f4b4dac2341f6a3ba5a30f171f60b](https://github.com/ackerber/MIST4610_Project1/assets/95188765/6b934009-b2e0-4723-afb2-a572a4c399d8)
 
 ## Database Information
 Name of the database: ns_F2339217Group4
