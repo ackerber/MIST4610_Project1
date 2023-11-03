@@ -4,12 +4,12 @@
 Group 4
 
 ## Team Members
-Ethan Berry  
-Esha Bhat  
+Ethan Berry [@ethanberry](https://github.com/ethanberry)   
+Esha Bhat [@ohesha](https://github.com/ohesha)   
 Anna Kerber [@ackerber](https://github.com/ackerber)  
-Pranay Patel  
-Rafe Rynne  
-Jameson Shi
+Pranay Patel [@Pranay416](https://github.com/Pranay416)  
+Rafe Rynne [@IsThatCanon](https://github.com/IsThatCanon)   
+Jameson Shi [@jameson-shi](https://github.com/jameson-shi)   
 
 ## Problem Description
 
@@ -39,9 +39,7 @@ The "Inventory" entity is connected to suppliers through a many-to-one relations
 
 "Prescriptions" have many-to-one relationships with both patients and medical staff. This relationship links each prescription to a specific patient and the prescribing medical professional.
 
-“Emergency transport” records are associated with medical staff in a one-to-many relationship, indicating which medical staff members were involved in specific emergency transport incidents.
-
-![model](https://github.com/ackerber/MIST4610_Project1/assets/95188765/40606d4d-ad9a-4067-b201-4f7ffc0583af)
+“Emergency transport” records are associated with medical staff in a one-to-many relationship, indicating which medical staff members were involved in specific emergency transport incidents 
 
 
 ## Data Dictionary
@@ -85,7 +83,7 @@ Table: EMERGENCYTRANSPORT
 | transportDate |  The date the transport was used  |  DATETIME  | | YYYY-MM-DD HH:MI:SS| |
 | modeOfTransport |  The mode of transport  |   VARCHAR | 45| | |
 | destination|  The destination of the transport  | VARCHAR   | 45| | |
-| attendingMedicalStaff |  The staff attenting the transport  |  VARCHAR  | 45| | |
+| attendingMedicalStaff |  The staff attending the transport  |  VARCHAR  | 45| | |
 
 Table: EQUIPMENTUSED
 | Column Name | Description | Data Type | Size | Format | Key? |
@@ -151,11 +149,11 @@ TABLE: PATIENTS
 | Column Name | Description | Data Type | Size | Format | Key? |
 | :-----: | :---: | :---: | :---: | :---: | :---: |
 | patientID |   Unique sequential number identifying the patient |  CHAR  | 9| AAA999999| PK|
-| fName |  The first name of the patient  |  VAQRCHAR  | 45 | | |
+| fName |  The first name of the patient  |  VARCHAR  | 45 | | |
 | lName |  The last name of the patient  |  VARCHAR  | 45 | | |
 | dateOfBirth |  Date the patient was born  | DATETIME | | YYYY-MM-DD HH:MI:SS| |
 | phone |  Phone number of the patient  |  VARCHAR  | 45 | (999) 999999| |
-| address |  Address of the patinet  |   VARCHAR | 45| | |
+| address |  Address of the patient  |   VARCHAR | 45| | |
 | email |  Email address of the patient  |  VARCHAR  | 45| | |
 | medicalHistory |  The patient's previous medical history  | VARCHAR   | 45| | |
 | insuranceInfo |  The patient's insurance plan  |  VARCHAR  | 45| | |
@@ -180,7 +178,57 @@ Table: SUPPLIERS
 |  email|  Email address of the company  |  VARCHAR  | 45| | |
 
 ## Ten Queries
+<img width="609" alt="Screenshot 2023-11-03 at 6 33 53 PM" src="https://github.com/ackerber/MIST4610_Project1/assets/95188765/e870ceab-7231-4b93-a604-1d780c7e180e">
 
+#### Query 1:  
+Description: This SQL query calculates the total spending with each supplier by summing the product of unit price and quantity for items in the Inventory. It then presents the results in descending order, listing suppliers with the highest total spending first.  
+
+Justification: This query is valuable for procurement and financial analysis as it helps identify and prioritize the suppliers with the highest total spending, enabling better supplier management and cost control.
+
+#### Query 2:  
+Description: This SQL query retrieves the first name, last name, and total billing amount for patients whose payment status is marked as 'Incomplete' in the BillingRecords, by joining the Patients and BillingRecords tables.  
+
+Justification: This query is useful for identifying patients with incomplete payments, facilitating follow-up actions, and financial management within a healthcare system or medical practice.
+
+#### Query 3:  
+Description: This SQL query selects the first name, last name, and phone number of patients who do not have any associated emergency contacts in the EmergencyContacts table.  
+
+Justification: This query is useful for identifying patients who may not have provided emergency contact information, allowing the healthcare facility to follow up and ensure the completeness of patient records for safety and communication purposes.
+
+#### Query 4:  
+Description: This SQL query retrieves the equipment name, counts how many times each equipment has been used in appointments (UsageCount), and displays the maintenance schedule for equipment that has been used in appointments. It uses a left join between the MedicalEquipment and EquipmentUsed tables to capture equipment usage.  
+
+Justification: This query helps in tracking the usage of medical equipment in appointments and provides information about the maintenance schedule, which is crucial for ensuring the proper functioning and upkeep of medical equipment in a healthcare facility.  
+
+#### Query 5:  
+Description: This SQL query selects the first name (fName) and last name (lName) of patients, along with the total number of appointments they have, by performing a left join between the Patients and Appointments tables.  
+
+Justification: This query is useful for tracking and reporting on the total number of appointments for each patient, providing insights into patient engagement and scheduling patterns within a healthcare system or medical practice.
+
+#### Query 6:  
+Description: This SQL query retrieves the facility name and the count of medical equipment available in each facility, considering equipment usage, and then orders the results in descending order based on the equipment count.  
+
+Justification: This query is valuable for assessing the inventory and utilization of medical equipment in different facilities, allowing for effective resource allocation and maintenance management based on equipment availability and usage.
+
+#### Query 7:  
+Description: This SQL query retrieves the first name (fName) and last name (lName) of patients who do not have any upcoming appointments, based on the current date, and orders the results alphabetically by first name and last name.  
+
+Justification: This query is helpful for identifying patients who do not have scheduled appointments, allowing healthcare providers to reach out to them for scheduling or follow-up, and it presents the results in an organized manner for easy reference.
+
+#### Query 8:  
+Description: This SQL query retrieves the qualifications of medical staff and counts the number of times they are associated with emergency transport events by performing a left join between the MedicalStaff and EmergencyTransport tables. It then groups the results by qualifications.  
+
+Justification: This query is useful for analyzing the involvement of medical staff with different qualifications in emergency transport cases, which can help in resource allocation, training, and quality assessment in a healthcare setting.
+
+#### Query 9:  
+Description: This SQL query retrieves the names and quantities of items in the inventory where the quantity on hand is less than 100, and the threshold for low quantity can be adjusted as needed.  
+
+Justification: This query is valuable for inventory management, as it identifies items that are running low in stock, allowing for timely restocking and ensuring that necessary items are readily available.
+
+#### Query 10:  
+Description: This SQL query retrieves information about items in the Inventory, calculates and categorizes their shelf life, and orders the results in descending order based on the shelf life category.  
+
+Justification: This query is essential for managing inventory by providing a clear overview of items' shelf life and allowing for the identification of items with longer or shorter shelf lives, enabling more efficient inventory control and decision-making.
 
 ## Database Information
 
