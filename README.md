@@ -254,4 +254,6 @@ Justification: This query is essential for managing inventory by providing a cle
 ## Database Information
 Name of the database: ns_F2339217Group4
 
+Each query listed above has been stored as a stored procedure, and can be called using CALL TP_Q#. 
+
 
